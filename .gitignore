@@ -1,0 +1,3 @@
+# Ignore packaged addons/resources
+*.mcpack
+*.mcaddon
