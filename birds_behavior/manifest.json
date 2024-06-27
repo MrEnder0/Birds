@@ -1,0 +1,29 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Makes birds fly high above in the sky",
+		"name": "Birds",
+		"uuid": "7ec07343-403d-462e-9610-f84c2a0ee6f9",
+		"version": [
+			2,
+			5,
+			0
+		],
+		"min_engine_version": [
+			1,
+			20,
+			30
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "622df43f-44de-41b5-a2f2-cc8c4d274acd",
+			"version": [
+				2,
+				5,
+				0
+			]
+		}
+	]
+}
