@@ -5,12 +5,12 @@
 			"identifier": "birds:bird_particle",
 			"basic_render_parameters": {
 				"material": "particles_blend",
-				"texture": "textures/particle/bird"
+				"texture": "textures/particle/birds"
 			}
 		},
 		"components": {
 			"minecraft:emitter_initialization": {
-				"creation_expression": "variable.x = math.random(-1 , 1);variable.z = math.random(-1 , 1);"
+				"creation_expression": "variable.x = math.random(-1 , 1);variable.z = math.random(-1 , 1);variable.is_duck = math.floor(math.random(0,1)*10/9.9)*16;"
 			},
 			"minecraft:emitter_rate_instant": {
 				"num_particles": "math.random(3, 9)"
@@ -38,7 +38,17 @@
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [0.4, 0.4],
-				"facing_camera_mode": "direction_y"
+				"facing_camera_mode": "direction_y",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 32,
+					"flipbook": {
+						"base_UV": [0, "variable.is_duck"],
+						"size_UV": [16, 16],
+						"step_UV": [0, 16],
+						"max_frame": 1
+					}
+				}
 			},
 			"minecraft:particle_appearance_lighting": {},
 			"minecraft:particle_appearance_tinting": {
